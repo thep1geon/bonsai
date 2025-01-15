@@ -17,6 +17,12 @@ I want to create more than a basic command-line interface kernel, I want to make
 a "usable" OS. This all seems really ambitious, but I think its important to have
 tangible goals to reach for.
 
+### Dependencies
+
+- nasm
+
+- GNU Make
+
 ## Milestones
 
 [x] - Something booting
