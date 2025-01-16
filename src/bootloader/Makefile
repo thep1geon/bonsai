@@ -1,4 +1,4 @@
 TARGET := ../../bin/boot.bin
 
-$(TARGET):
+all:
 	nasm *.s -o $(TARGET)
