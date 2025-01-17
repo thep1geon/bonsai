@@ -94,6 +94,3 @@ print_hex_end:
     POP     bx
     POP     ax
     RET                             ;; Return from the function
-
-print_hex_buf:
-    TIMES   16 DB 0                 ;; Create a buffer of 16 zeros
