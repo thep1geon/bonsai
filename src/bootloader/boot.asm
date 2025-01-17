@@ -22,7 +22,8 @@ hang:
 
     JMP     $
 
-    %INCLUDE "print.s"
+
+    %INCLUDE "print.asm"
 
 str: 
     DB      `Hello, World!`, 0

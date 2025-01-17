@@ -1,4 +1,4 @@
 TARGET := ../../bin/boot.bin
 
-$(TARGET): print.s boot.s
-	nasm boot.s -o $(TARGET)
+$(TARGET): print.asm boot.asm
+	nasm boot.asm -o $(TARGET)
