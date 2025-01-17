@@ -1,38 +1,31 @@
-;; I love programming in x86 assembly
-
+                            ;; I love programming in x86 assembly
+                            ;;
+                            ;; I think programming in x86 assembly is my
+                            ;; second favorite thing in the entire world.
+                            ;; My "roommate" is my first favorite thing in the
+                            ;; world.
 
     [ORG 0x7C00]            ;; Where the BIOS expects the bootloader to be stored
                             ;; Addresses before this are reserved for other things
-                            ;; Very suspicous if you ask me
+                            ;; Very suspicious if you ask me
     [BITS 16]
 
 hang:
     MOV     bx, str
-    CALl    print
-    JMP     hang
+    CALL    println_str
 
-print:
-    PUSH    ax
-    PUSH    bx
+    MOV     bx, 0x1234
+    CALL    print_hex
 
-    MOV     ah, 0x0E
+    MOV     bx, str
+    CALL    println_str
 
-print_loop:
-    CMP     byte[bx], 0
-    JE      print_end
+    JMP     $
 
-    MOV     al, byte[bx]
-    INT     0x10
+    %INCLUDE "print.s"
 
-    INC     bx
-    JMP     print_loop
-
-print_end:
-    POP     bx
-    POP     ax
-    RET
-
-str: DB `Hello, World\r\n`, 0
+str: 
+    DB      `Hello, World!`, 0
 
     TIMES   510-($-$$) DB 0
     DW      0xAA55          ;; The boot signature the BIOS looks for to see if 

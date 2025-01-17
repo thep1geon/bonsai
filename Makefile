@@ -9,7 +9,7 @@ bootloader: $(BOOTLOADER_DIR)
 	make -C $(BOOTLOADER_DIR)
 
 run: bootloader
-	qemu-system-x86_64 $(BIN_DIR)/boot.bin
+	qemu-system-x86_64 -drive format=raw,file=$(BIN_DIR)/boot.bin
 
 clean:
 	rm -rf $(BIN_DIR)/*
