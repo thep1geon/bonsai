@@ -1,4 +1,4 @@
-# Willow
+# Bonsai
 
 An operating system written from scratch for the fun of it; Recreational programming
 at its finest. Another reason I want to write an OS from scratch is because how
@@ -17,6 +17,30 @@ I want to create more than a basic command-line interface kernel, I want to make
 a "usable" OS. This all seems really ambitious, but I think its important to have
 tangible goals to reach for.
 
+#### What's in a name?
+
+The idea is to name everything (each subsystem and other utilities) after trees.
+
+##### Bonsai OS
+
+- Kernel and various subsystems
+
+    - Willow   -> Kernel
+
+    - Ash      -> Shell (Funny accronym for (A)nother (SH)ell which is something 
+                        I've been wanting to do for a while now)
+     
+    - Fir      -> File System
+     
+    - Cypress  -> Memory Manager for the kernel
+
+- Outside of the kernel stuffs
+
+    - Sakura   -> Display Server
+     
+    - Spruce   -> Text Editor     
+
+
 ### Dependencies
 
 - nasm
@@ -29,9 +53,9 @@ tangible goals to reach for.
 
 [ ] - Get Doom running natively
 
-[ ] - Make a basic webserver running from Willow
+[ ] - Make a basic webserver running from Bonsai
 
-[ ] - Get a C compiler working on Willow
+[ ] - Get a C compiler working on Bonsai
 
 [ ] - Introduce Zig into the kernel
 

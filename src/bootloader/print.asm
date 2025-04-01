@@ -88,7 +88,7 @@ print_hex_loop_end:
     JMP     print_hex_loop          ;; jump to the beginning of the loop
 
 print_hex_end:
-    CALL print_newline              ;; Print a newline
+    CALL    print_newline           ;; Print a newline
 
     POP     cx                      ;; Restore the state of the variables
     POP     bx

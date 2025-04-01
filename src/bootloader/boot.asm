@@ -10,24 +10,20 @@
                             ;; Very suspicious if you ask me
     [BITS 16]
 
+    KERNEL_OFFSET equ 0x1000 ;; Offset of the kernel from the bootloader I think
+
+boot:
+    MOV     bx, str
+    CALL    println_str
+
 hang:
-    MOV     bx, str
-    CALL    println_str
+    JMP     hang
 
-    MOV     bx, 0x1234
-    CALL    print_hex
-
-    MOV     bx, str
-    CALL    println_str
-
-    JMP     $
-
+str:
+    DW      "Hello, World!", 0
 
     %INCLUDE "print.asm"
 
-str: 
-    DB      `Hello, World!`, 0
-
     TIMES   510-($-$$) DB 0
     DW      0xAA55          ;; The boot signature the BIOS looks for to see if 
-                            ;; we can boot
+                            ;; we can boot this code
