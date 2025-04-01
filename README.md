@@ -19,22 +19,24 @@ tangible goals to reach for.
 
 #### What's in a name?
 
-The idea is to name everything (each subsystem and other utilities) after trees.
+Everything (each subsystem and other utilities) is named after a tree kind of
+pretaining to what the thing is. A bonsai is a tree that is purposefully kept
+small. So the idea is to have a bonsai forest of subsystems and utilities.
 
 ##### Bonsai OS
 
 - Kernel and various subsystems
 
     - Willow   -> Kernel
-
-    - Ash      -> Shell (Funny accronym for (A)nother (SH)ell which is something 
-                        I've been wanting to do for a while now)
      
     - Fir      -> File System
      
     - Cypress  -> Memory Manager for the kernel
 
 - Outside of the kernel stuffs
+
+    - Ash      -> Shell (Funny accronym for (A)nother (SH)ell which is something 
+                        I've been wanting to do for a while now)
 
     - Sakura   -> Display Server
      
